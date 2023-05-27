@@ -35,9 +35,7 @@ class HomeScreen: UIViewController {
         addBorder(to: humidityView, width: 1.0, cornerRadius: 10)
         addBorder(to: windView, width: 1.0, cornerRadius: 10)
         addBorder(to: seaLevelView, width: 1.0, cornerRadius: 10)
-        addBorder(to: seaLevelView, width: 1.0, cornerRadius: 10)
         addBorder(to: coordinatesView, width: 1.0, cornerRadius: 10)
-        addBorder(to: descriptionView, width: 1.0, cornerRadius: 0)
     }
     
     func getCity() {
