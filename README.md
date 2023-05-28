@@ -18,13 +18,13 @@ This project enables you to see weather condition info of the cities that are fe
 <table>
   <tr>
     <td>
-      <img src="https://github.com/rkmkrc/SimpleWeatherApp/assets/42948198/97552e61-6380-45da-8f71-744f4acb6592" alt="Layouts" width="220" height="435">
+      <img src="https://github.com/rkmkrc/SimpleWeatherApp/assets/42948198/cd4c4522-fa8b-46e5-ba0b-163214ba9083" alt="Layouts" width="220" height="435">
     </td>
     <td>
-      <img src="https://github.com/rkmkrc/SimpleWeatherApp/assets/42948198/54719300-0421-4708-88da-679c9de27c95" alt="Home Screen" width="220" height="435">
+      <img src="https://github.com/rkmkrc/SimpleWeatherApp/assets/42948198/d318f956-51bb-4ab0-ac22-306cfd51e3d0" alt="Home Screen" width="220" height="435">
     </td>
     <td>
-      <img src="https://github.com/rkmkrc/SimpleWeatherApp/assets/42948198/a44d8b17-946a-40ef-a0b2-d34ffdbbd6c0" alt="Search Screen" width="220" height="435">   
+      <img src="https://github.com/rkmkrc/SimpleWeatherApp/assets/42948198/0fb0d83f-4aba-47dd-98d2-b3ae5fb2ad25" alt="Search Screen" width="220" height="435">   
     </td>
   </tr>
 </table>
