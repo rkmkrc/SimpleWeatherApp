@@ -22,4 +22,5 @@ struct Constants {
 struct MyError {
     static let URL_ERROR = "ERROR: Cannot create URL."
     static let DATA_ERROR = "ERROR: Cannot get Data."
+    static let JSON_FILE_NOT_FOUND_ERROR = "JSON file not found."
 }

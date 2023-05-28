@@ -22,3 +22,5 @@ func addBorder(to view: UIView, width: CGFloat, cornerRadius: CGFloat) {
     view.layer.cornerRadius = cornerRadius
     view.clipsToBounds = true
 }
+
+

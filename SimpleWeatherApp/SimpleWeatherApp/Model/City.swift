@@ -47,3 +47,10 @@ struct Wind: Codable {
     let speed: Float?
     let gust: Float?
 }
+
+struct JsonCity: Codable {
+    let id: Int?
+    let name: String?
+}
+
+

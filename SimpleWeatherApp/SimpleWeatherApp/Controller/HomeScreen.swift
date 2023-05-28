@@ -28,18 +28,19 @@ class HomeScreen: UIViewController {
     @IBOutlet weak var weatherDescriptionLabel: UILabel!
     
     var city: City?
+    var cityID: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getCity()
+        getCity(id: self.cityID)
         addBorder(to: humidityView, width: 1.0, cornerRadius: 10)
         addBorder(to: windView, width: 1.0, cornerRadius: 10)
         addBorder(to: seaLevelView, width: 1.0, cornerRadius: 10)
         addBorder(to: coordinatesView, width: 1.0, cornerRadius: 10)
     }
     
-    func getCity() {
-        if let url = NetworkManager.shared.getWeatherURL(forID: "745044") {
+    func getCity(id: String?) {
+        if let url = NetworkManager.shared.getWeatherURL(forID: id ?? "745044") {
             fetchData(from: url, expecting: City.self) { result in
                 switch result {
                 case .success(let city):
