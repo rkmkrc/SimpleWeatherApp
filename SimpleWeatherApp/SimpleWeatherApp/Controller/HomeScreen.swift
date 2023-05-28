@@ -28,7 +28,7 @@ class HomeScreen: UIViewController {
     @IBOutlet weak var weatherDescriptionLabel: UILabel!
     
     var city: City?
-    var cityID: String?
+    var cityID = "745044"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +39,8 @@ class HomeScreen: UIViewController {
         addBorder(to: coordinatesView, width: 1.0, cornerRadius: 10)
     }
     
-    func getCity(id: String?) {
-        if let url = NetworkManager.shared.getWeatherURL(forID: id ?? "745044") {
+    func getCity(id: String) {
+        if let url = NetworkManager.shared.getWeatherURL(forID: id) {
             fetchData(from: url, expecting: City.self) { result in
                 switch result {
                 case .success(let city):
@@ -68,7 +68,7 @@ class HomeScreen: UIViewController {
         let longitude = getStringFromOptional(fromOptionalValue: self.city?.coord?.lon, defaultString: Constants.placeholderLon)
         let latitude = getStringFromOptional(fromOptionalValue: self.city?.coord?.lat, defaultString: Constants.placeholderLat)
         let description = getStringFromOptional(fromOptionalValue: self.city?.weather?[0].description, defaultString: Constants.placeholderWeatherDescription)
-
+        
         cityNameLabel.text = cityName
         currentTemperatureLabel.text = "Current: \(currentTemp) C"
         feelsLikeLabel.text = "Feels Like: \(feelsLike) C"

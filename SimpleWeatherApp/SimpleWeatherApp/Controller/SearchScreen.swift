@@ -10,8 +10,6 @@ import UIKit
 
 class SearchScreen: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
-    
-    
     @IBOutlet weak var citiesTableView: UITableView!
     var cities: [JsonCity] = [] {
         didSet {
@@ -70,19 +68,18 @@ class SearchScreen: UIViewController, UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let city = filteredCities[indexPath.row]
         performSegue(withIdentifier: "goToDetails", sender: city.id)
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToDetails",
-           let detailsScreen = segue.destination as? DetailScreen,
+           let detailsScreen = segue.destination as? HomeScreen,
            let cityID = sender as? Int {
             detailsScreen.cityID = String(cityID)
         }
     }
-
-
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
@@ -92,8 +89,6 @@ class SearchScreen: UIViewController, UITableViewDataSource, UITableViewDelegate
         }
         citiesTableView.reloadData()
     }
-    
-    
 }
 
 
